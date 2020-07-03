@@ -6,7 +6,7 @@
     "scripts": {
         "start": "webpack-dev-server --config ./config/webpack.dev.js --mode development -d --open",
         "build": "webpack --config ./config/webpack.prod.js --mode production",
-        "testBuild": "http-server ./dist -p 8888"
+        "testBuild": "http-server ./dist -p 8888 --proxy http://localhost:8888?"
     },
     "author": "NoraH1to",
     "license": "MIT",
@@ -15,7 +15,11 @@
         "@babel/core": "^7.10.2",
         "@babel/preset-env": "^7.10.2",
         "@babel/preset-react": "^7.10.1",
-        "antd": "^4.3.4",
+        "@babel/runtime": "^7.10.4",
+        "@hot-loader/react-dom": "^16.13.0",
+        "@material-ui/core": "^4.11.0",
+        "@material-ui/icons": "^4.9.1",
+        "axios": "^0.19.2",
         "babel-loader": "^8.1.0",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.5.3",
@@ -29,6 +33,9 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-hot-loader": "^4.12.21",
+        "react-router": "^5.2.0",
+        "react-router-config": "^5.1.1",
+        "react-router-dom": "^5.2.0",
         "sass-loader": "^8.0.2",
         "style-loader": "^1.2.1",
         "url-loader": "^4.1.0",
@@ -37,7 +44,9 @@
         "webpack-merge": "^4.2.2"
     },
     "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.10.4",
         "autoprefixer": "^9.8.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
         "postcss": "^7.0.32",
         "postcss-loader": "^3.0.0",
         "webpack": "^4.43.0"
